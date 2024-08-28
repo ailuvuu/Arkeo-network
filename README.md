@@ -15,17 +15,21 @@ source .bash_profile
 Node Installation
 ```
 
-# Download binary
+**Download binary**
+```
 cd $HOME
 curl -s https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/arkeod > arkeod
 chmod +x arkeod
 mkdir -p $HOME/go/bin/
 mv arkeod $HOME/go/bin/
+```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 arkeod config chain-id arkeo
 arkeod config keyring-backend test
 arkeod config node tcp://localhost:26657
+```
 
 # Initialize the node
 arkeod init "Your Node Name" --chain-id arkeo
