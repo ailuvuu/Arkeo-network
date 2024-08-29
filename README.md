@@ -31,10 +31,12 @@ arkeod config keyring-backend test
 arkeod config node tcp://localhost:26657
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 arkeod init "Your Node Name" --chain-id arkeo
+```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
 curl -L https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/genesis.json > $HOME/.arkeo/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/addrbook.json > $HOME/.arkeo/config/addrbook.json
 
