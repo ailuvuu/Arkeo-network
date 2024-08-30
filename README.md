@@ -37,8 +37,10 @@ arkeod init "Your Node Name" --chain-id arkeo
 ```
 
 **Download genesis and addrbook files**
+```
 curl -L https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/genesis.json > $HOME/.arkeo/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/addrbook.json > $HOME/.arkeo/config/addrbook.json
+```
 
 # Set seeds
 sed -i -e 's|^seeds *=.*|seeds = "20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:22856"|' $HOME/.arkeo/config/config.toml
