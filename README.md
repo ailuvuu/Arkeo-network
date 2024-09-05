@@ -66,7 +66,8 @@ sed -i \
 curl "https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/arkeonetwork-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.arkeo"
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
 [Unit]
 Description=Arkeo Network node service
@@ -82,6 +83,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable arkeod.service
+```
 
 # Start the service and check the logs
 sudo systemctl start arkeod.service
