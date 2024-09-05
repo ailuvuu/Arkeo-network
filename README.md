@@ -61,8 +61,10 @@ sed -i \
   $HOME/.arkeo/config/app.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/arkeonetwork-testnet/arkeonetwork-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.arkeo"
+```
 
 # Create a service
 sudo tee /etc/systemd/system/arkeod.service > /dev/null << EOF
